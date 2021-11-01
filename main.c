@@ -18,6 +18,11 @@ void sort_subarray_in_increasing_order(int arr[], int leftBorder, int rightBorde
     sort_subarray_in_increasing_order(arr, leftBorder, mid, tmp);
     sort_subarray_in_increasing_order(arr, mid+1, rightBorder, tmp);
     int i=leftBorder, j=mid+1, k=leftBorder;
+/**
+ *  <i> is used to iterate through the first half of the subarray
+ *  <j> is used to iterate through the second half of the subarray
+ *  <k> is used to iterate through the temporary array
+**/
     while(k <= rightBorder){
         if (i<=mid && j<=rightBorder){
             if (arr[i] < arr[j]) tmp[k ++] = arr[i ++];
